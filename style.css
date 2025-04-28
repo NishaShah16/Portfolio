@@ -1,0 +1,470 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Main Colors */
+:root {
+  --dusty-rose: #DCAE96;
+  --soft-grey: #F5F5F5;
+  --dark-grey: #333;
+  --accent-color: #915F6D;
+  --text-color: #222;
+}
+
+/* Navigation Bar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: var(--dusty-rose);
+  color: var(--text-color);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--accent-color);
+}
+
+/* Home Section */
+/* Home Section */
+.home-section {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #f4f4f9;
+}
+
+.welcome-text {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.intro-text {
+  font-family: var(--font-stack);
+  font-size: 1.3em;
+  color: var(--text-color);
+  line-height: 1.8;
+  margin-bottom: 30px;
+  text-align: justify;
+  max-width: 800px;
+}
+
+.intro-text strong {
+  color: var(--highlight-color);
+}
+
+ :root {
+  --primary-color: #0c0701; 
+  --hover-color: #f57f7f; 
+  --instagram-color: #E1306C; 
+  --github-color: #333;
+  --linkedin-color: #0077B5; 
+  --email-color: #D689A4; 
+}  
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  margin: 0 15px;
+  font-size: 2em; /* Bigger icons */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: scale(1.2); /* Icon hover effect */
+}
+
+/* Individual icon hover colors */
+.social-links a[href*="instagram.com"] {
+  color: var(--instagram-color);
+}
+
+.social-links a[href*="github.com"] {
+  color: var(--github-color);
+}
+
+.social-links a[href*="linkedin.com"] {
+  color: var(--linkedin-color);
+}
+
+.social-links a[href*="mailto:"] {
+  color: var(--email-color);
+}
+
+
+/* About Section */
+/* About Section */
+/* About Section Styling */
+.about-section {
+  padding: 60px 30px;
+  background-color: var(--soft-grey);
+  text-align: left;
+  font-family: 'Arial', sans-serif; /* Adding a default font */
+  color: var(--dark-grey); /* Ensuring text color matches the theme */
+}
+.about-section h2{
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 2em;
+  color: var(--accent-color);
+}
+
+.about-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px; /* Added extra spacing for better separation */
+  transition: transform 0.3s ease; /* Smooth hover transition */
+}
+
+.about-item:hover {
+  transform: translateY(-5px); /* Slight hover effect to lift items */
+}
+
+.about-item img {
+  max-width: 280px; /* Set image size */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+  margin-right: 30px; /* Space between image and text */
+  transition: box-shadow 0.3s ease; /* Smooth shadow transition */
+}
+
+.about-item img:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Hover effect for images */
+}
+
+.about-item.reverse {
+  flex-direction: row-reverse; /* Reverse the order for alternating layout */
+}
+
+.about-item p {
+  max-width: 650px; /* Increased width for better text layout */
+  line-height: 1.6; /* Improved readability */
+  font-size: 1.1em;
+  color: var(--dark-grey); /* Ensuring paragraph text is legible */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .about-item {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text for a cleaner look */
+  }
+
+  .about-item img {
+    margin-right: 0; /* Remove right margin for stacked layout */
+    margin-bottom: 20px; /* Add space below the image */
+    max-width: 100%; /* Make the image responsive */
+  }
+
+  .about-item p {
+    max-width: 100%; /* Full width for text on smaller screens */
+    font-size: 1.2em; /* Slightly larger text for readability */
+  }
+}
+
+
+/* Skills Section */
+:root {
+  --circle-size: 150px;
+  --circle-stroke: 2.8;
+  --dusty-rose: #D689A4;
+  
+}
+
+.skills-section {
+  background-color: #f0f4f8;
+  padding: 50px 20px;
+  text-align: center;
+  margin: 100px;
+}
+
+.section-title {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 2px;
+}
+
+.skills-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.circle-skill {
+  width: var(--circle-size);
+  text-align: center;
+}
+
+.progress-circle {
+  position: relative;
+  width: var(--circle-size);
+  height: var(--circle-size);
+}
+
+.circle {
+  transform: rotate(-90deg);
+  width: 100%;
+  height: 100%;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #e0e0e0;
+  stroke-width: var(--circle-stroke);
+}
+
+.circle-progress {
+  fill: none;
+  stroke: var(--dusty-rose);
+  stroke-width: var(--circle-stroke);
+  stroke-linecap: round;
+  stroke-dasharray: 100, 100;
+  stroke-dashoffset: 100;
+  animation: progress 2s ease-out forwards;
+}
+
+.circle-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.percent {
+  font-size: 1.5em;
+  color: var(--dusty-rose);
+}
+
+.skill-label {
+  font-size: 1em;
+  color: #555;
+}
+
+/* Keyframe animation for progress */
+@keyframes progress {
+  from {
+    stroke-dashoffset: 100;
+  }
+  to {
+    stroke-dashoffset: calc(100 - (var(--percent) * 100 / 100));
+  }
+}
+
+/* Optional hover animation for an added effect */
+.progress-circle:hover .circle-progress {
+  stroke-width: 4;
+  transition: stroke-width 0.3s ease;
+}
+
+
+
+/* Projects Section */
+.projects-section {
+  background-color: var(--soft-grey);
+  padding: 40px 20px;
+}
+.projects-section h2 {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 2em;
+  color: var(--accent-color);
+}
+.project-item {
+  background-color: #f1f1f1;
+  margin: 20px auto;
+  padding: 20px 25px;
+  max-width: 700px;
+  text-align: left;
+  border-left: 5px solid var(--dusty-rose);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.project-item h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: var(--accent-color);
+}
+
+.project-item ul {
+  margin-top: 10px;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 10px;
+  font-weight: bold;
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.github-link:hover {
+  color: var(--dusty-rose);
+}
+
+.github-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  filter: invert(0%); /* Keep the original black icon */
+}
+
+
+/* Contact Section */
+/* Contact Section */
+.contact-section {
+  padding: 80px 30px;
+  background-color: var(--soft-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px; /* Larger gap for a balanced look */
+  flex-wrap: wrap;
+}
+
+.contact-image {
+  max-width: 350px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.contact-image:hover {
+  transform: scale(1.05); /* Subtle hover effect */
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  width: 100%;
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.contact-form:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.contact-form h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: var(--dark-grey);
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid var(--dark-grey);
+  border-radius: 5px;
+  font-size: 1em;
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--dusty-rose);
+  outline: none;
+}
+
+.contact-btn {
+  padding: 15px;
+  border: none;
+  background-color: var(--dusty-rose);
+  color: white;
+  font-size: 1.1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: var(--accent-color);
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .contact-section {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+
+  .contact-image {
+    max-width: 280px;
+  }
+}
+
+/* Footer */
+.footer {
+  background-color: var(--dark-grey);
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+}

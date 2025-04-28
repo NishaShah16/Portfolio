@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Form</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<h2>Simple Form</h2>
+
+<form id="myForm">
+  Name: <input type="text" id="name"><br><br>
+  Address: <input type="text" id="address"><br><br>
+  Mobile: <input type="text" id="mobile"><br><br>
+  Gender:
+  <input type="radio" name="gender" value="Male">Male
+  <input type="radio" name="gender" value="Female">Female<br><br>
+  
+  <input type="hidden" id="editIndex" value="-1">
+  <button type="submit">Submit</button>
+  <div id="errorMsg" style="color:red;"></div>
+</form>
+
+<h3>Data</h3>
+<table border="1" id="dataTable">
+  <thead>
+    <tr>
+      <th>S.No</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Mobile</th>
+      <th>Gender</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+<script>
+  let list = [];
+
+  function showData() {
+    let rows = "";
+    list.forEach((item, index) => {
+      rows += `<tr>
+        <td>${index + 1}</td>
+        <td>${item.name}</td>
+        <td>${item.address}</td>
+        <td>${item.mobile}</td>
+        <td>${item.gender}</td>
+        <td>
+          <button onclick="editRow(${index})">Edit</button>
+          <button onclick="deleteRow(${index})">Delete</button>
+        </td>
+      </tr>`;
+    });
+    $('#dataTable tbody').html(rows);
+  }
+
+  $('#myForm').submit(function (e) {
+    e.preventDefault();
+
+    let name = $('#name').val().trim();
+    let address = $('#address').val().trim();
+    let mobile = $('#mobile').val().trim();
+    let gender = $('input[name="gender"]:checked').val();
+    let index = $('#editIndex').val();
+
+    let error = "";
+
+
+    $('#errorMsg').html("");
+
+    let obj = { name, address, mobile, gender };
+
+    if (index == -1) {
+      list.push(obj);
+    } else {
+      list[index] = obj;
+    }
+
+    showData();
+    $('#myForm')[0].reset();
+    $('#editIndex').val("-1");
+  });
+
+  function deleteRow(i) {
+    list.splice(i, 1);
+    showData();
+  }
+
+  function editRow(i) {
+    let d = list[i];
+    $('#name').val(d.name);
+    $('#address').val(d.address);
+    $('#mobile').val(d.mobile);
+    $('input[name="gender"][value="' + d.gender + '"]').prop('checked', true);
+    $('#editIndex').val(i);
+  }
+</script>
+
+</body>
+</html>

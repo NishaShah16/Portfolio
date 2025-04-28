@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="index.html">NISHA SHAH</a></div>
+            <ul class="nav-links">
+                
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Projects Page Content -->
+    <section class="projects-section">
+        <h2>Projects</h2>
+    
+        <div class="project-item">
+            <h3>Registration and Login System</h3>
+            <p><strong>Tech Stack:</strong> ASP.NET MVC, ADO.NET, SQL Server</p>
+            <p><strong>Platform:</strong> Internal Web Application (Office Project)</p>
+            <p><strong>Description:</strong></p>
+            <p>
+                A secure and scalable registration and login system designed for internal users. The application includes both 
+                <strong>Pre-Registration</strong> and <strong>Final Registration</strong> modules, integrated with user authentication 
+                and role-based access. It also includes a dashboard to manage user data after login.
+            </p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>Secure Login with password validation</li>
+                <li>Pre-registration form with temporary data storage</li>
+                <li>Final registration form that updates existing records</li>
+                <li>Dashboard view after successful login</li>
+                <li>Session handling and validation controls</li>
+            </ul>
+            <p><strong>Logic:</strong> Implemented login authentication using ADO.NET and SQL queries with session management. 
+               Used conditional logic to distinguish between pre-registration and registration stages, allowing users to update 
+               their records without duplication. Applied form validation at both client and server-side.</p>
+            <a href="https://github.com/NishaShah16/Registration-login-page" target="_blank" class="github-link">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/github.svg" alt="GitHub" class="github-icon">
+                View on GitHub
+            </a>
+        </div>
+    
+        <div class="project-item">
+            <h3>Student Portal Management System (Practice Project)</h3>
+            <p><strong>Tech Stack:</strong> ASP.NET Core MVC, Entity Framework, SQL Server</p>
+            <p><strong>Platform:</strong> Web Application (Self-Learning Project)</p>
+            <p><strong>Description:</strong></p>
+            <p>
+                A CRUD-based web application built while learning from a YouTube tutorial, aimed at practicing full-stack development 
+                with ASP.NET Core MVC. The project simulates managing students, courses, and performance data with a responsive layout.
+            </p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>Basic CRUD operations: Create, Read, Update, Delete</li>
+                <li>Student form with data validation</li>
+                <li>Course management module</li>
+                <li>Database handling using Entity Framework and LINQ</li>
+                <li>Clean UI with Bootstrap styling</li>
+            </ul>
+            <p><strong>Logic:</strong> Implemented Model-View-Controller architecture to structure the application. 
+               Entity Framework Core was used for database operations and LINQ was used to query and manage data. 
+               Practiced project structure, routing, and form handling concepts.</p>
+            <a href="https://github.com/NishaShah16/StudentPortal" target="_blank" class="github-link">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/github.svg" alt="GitHub" class="github-icon">
+                View on GitHub
+            </a>
+        </div>
+    
+        <div class="project-item">
+            <h3>Candidate Management & Filtering System</h3>
+            <p><strong>Tech Stack:</strong> ASP.NET MVC, ADO.NET, SQL Server</p>
+            <p><strong>Platform:</strong> Internal Web Application (Office Project)</p>
+            <p><strong>Description:</strong></p>
+            <p>
+                A system designed to manage and filter large volumes of candidate data based on specific criteria like Post ID. 
+                Developed for internal use to simplify the candidate shortlisting process.
+            </p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>Data filtering by Post ID using SQL queries</li>
+                <li>Dynamic dropdown lists populated from the database</li>
+                <li>Insert, update, delete, and search operations via ADO.NET</li>
+                <li>Structured table views to display matching records</li>
+            </ul>
+            <p><strong>Logic:</strong> Implemented filtering using SQL WHERE clause with parameterized queries via ADO.NET to prevent SQL injection. Dropdowns linked using foreign key relationships for dynamic data binding.</p>
+            <a href="https://github.com/NishaShah16/Duplicate-data-and-filter-by-post-id" target="_blank" class="github-link">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/github.svg" alt="GitHub" class="github-icon">
+                View on GitHub
+            </a>
+        </div>
+    
+        <div class="project-item">
+            <h3>Personal Portfolio Website</h3>
+            <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
+            <p><strong>Platform:</strong> Static Website</p>
+            <p><strong>Description:</strong></p>
+            <p>
+                A responsive and clean personal portfolio website to showcase my skills, experience, and projects. Designed to reflect my professional identity with a blend of development and design.
+            </p>
+            <p><strong>Key Features:</strong></p>
+            <ul>
+                <li>Sections: About Me, Skills, Projects, Contact</li>
+                <li>Mobile-friendly responsive layout</li>
+                <li>Interactive design with hover effects and transitions</li>
+                <li>Custom color theme (Dusty Rose palette)</li>
+                <li>Integrated contact form for user messages</li>
+            </ul>
+            <p><strong>Logic:</strong> Structured with semantic HTML and styled using media queries in CSS for responsiveness. JavaScript used for smooth scrolling and interactive UI elements.</p>
+            <a href="https://github.com/NishaShah16/Portfolio" target="_blank" class="github-link">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/github.svg" alt="GitHub" class="github-icon">
+                View on GitHub
+            </a>
+        </div>
+    </section>
+    
+    
+    
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Portfolio. All rights reserved.</p>
+    </footer>
+
+    <!-- GSAP Animation Script -->
+    <script src="script.js"></script>
+</body>
+</html>
