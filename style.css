@@ -33,6 +33,15 @@
   font-size: 1.5em;
   font-weight: bold;
 }
+.logo a {
+  color: #333; /* dark grey */
+  text-decoration: none; /* optional: removes underline */
+}
+
+.logo a:hover {
+  color: #000; /* optional: darker color on hover */
+}
+
 
 .nav-links {
   list-style: none;
@@ -179,7 +188,11 @@
 .about-item.reverse {
   flex-direction: row-reverse; /* Reverse the order for alternating layout */
 }
-
+@media (max-width: 768px) {
+  .about-item.reverse {
+    flex-direction: column-reverse; /* Stacks content vertically on mobile, but keeps image below text */
+  }
+}
 .about-item p {
   max-width: 650px; /* Increased width for better text layout */
   line-height: 1.6; /* Improved readability */
