@@ -141,7 +141,15 @@
 .social-links a[href*="mailto:"] {
   color: var(--email-color);
 }
+.social-email {
+  color: var(--email-color); /* Define this in your root or replace with a color code */
+  text-decoration: none;
+  margin-right: 10px;
+}
 
+.social-email:hover {
+  color: #D44638; /* Gmail red */
+}
 
 /* About Section */
 /* About Section */
